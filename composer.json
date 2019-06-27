@@ -13,7 +13,8 @@
     "require": {
         "vimeo/psalm": "^3.0.15 || dev-master",
         "doctrine/collections": "^1.0",
-        "doctrine/orm": "^2.6" 
+        "doctrine/orm": "^2.6",
+        "doctrine/doctrine-bundle": "^1.11" 
     },
     "extra": {
         "psalm" : {

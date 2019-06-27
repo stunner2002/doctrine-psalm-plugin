@@ -12,7 +12,7 @@ use Doctrine\Common\Collections\Selectable;
 class EntityRepository implements ObjectRepository, Selectable
 {
 
-    /** @var string */
+    /** @var class-string<T> */
     protected $_entityName;
 
     /** @var EntityManagerInterface */
@@ -43,4 +43,12 @@ class EntityRepository implements ObjectRepository, Selectable
 
     /** @return ?T */
     public function findOneBy(array $criteria, ?array $orderBy = null) {}
+
+	/**
+	 * @param      $alias
+	 * @param null $indexBy
+	 *
+	 * @return QueryBuilder<T>
+	 */
+	public function createQueryBuilder($alias, $indexBy = null) {}
 }
